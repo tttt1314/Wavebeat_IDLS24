@@ -75,10 +75,5 @@ jupyter notebook --no-browser -port=8888
 [data.py](http://data.py) recover
 
 # Cite
-```jsx
-@inproceedings{steinmetz2021wavebeat,
-    title={{WaveBeat}: End-to-end beat and downbeat tracking in the time domain},
-    author={Steinmetz, Christian J. and Reiss, Joshua D.},
-    booktitle={151st AES Convention},
-    year={2021}}
-```
+
+Steinmetz, C. J., & Reiss, J. D. (2021). "WaveBeat: End-to-end beat and downbeat tracking in the time domain." In 151st AES Convention.
