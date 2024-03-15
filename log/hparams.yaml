@@ -1,0 +1,4 @@
+audio_sample_rate: 22050
+target_factor: 256
+precision: 32
+model_type: 'dstcn'
