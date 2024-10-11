@@ -123,6 +123,17 @@ jupyter notebook --no-browser -port=8888
 
 # TCN validation test
 
+# Jukebox feature extraction
+1. audio = jukemirlib.load_audio(audio_file)
+   Basically, this function includes (a) resampling to 44.1k hz (b) normalize the signal
+3. feat = jukemirlib.extract(audio, layers=[36])
+   This function
+   (1) first select the first 25 sec (or 24 sec) of the audio (see get_z() in jukemirlib.lib) as an input to the Jukebox VQ-VAE model
+   (2) Take the last level(downsampling factor of 128) of the VQ-VAE output as codified audio. Trim it to length of 8192.
+   (3) Input the codified audio into jukebox language model. Take the 26th layer output as our extracted feature. 
+Note: the extracted feature should be 8192*4800
+   
+
 ## Problems
 
 1. Not complete match of annotation and audiofiles
@@ -141,5 +152,7 @@ jupyter notebook --no-browser -port=8888
 
 # Results
 ![alt text](./wavebeat_results.png)
+
+
 
 
