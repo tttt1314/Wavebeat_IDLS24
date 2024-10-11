@@ -129,7 +129,7 @@ jupyter notebook --no-browser -port=8888
 3. feat = jukemirlib.extract(audio, layers=[36])
    1. first select the first 25 sec (or 24 sec) of the audio (see get_z() in jukemirlib.lib) as an input to the Jukebox VQ-VAE model
    2. Take the last level(downsampling factor of 128) of the VQ-VAE output as codified audio. Trim it to length of 8192.
-   3. Input the codified audio into jukebox language model. Take the 26th layer output as our extracted feature.
+   3. Input the codified audio into jukebox language model. Take the 36th layer output as our extracted feature.
    
 ### Note: the extracted feature should be 8192*4800
    
